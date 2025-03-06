@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
+    <input type="text" id="input">
+    <button id="btn">play</button>
+
+
+
+
+    <script src="script.js"></script> <!--this was the main problem; I put this in head and 
+    when I was trying to getelementbyid, it was returning null because JS was running before that
+    element existed.-->
 </body>
 </html>

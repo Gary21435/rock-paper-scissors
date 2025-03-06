@@ -1,4 +1,6 @@
 
+
+
 function getComputerChoice() {
     let num = Math.random();
     let pick = "";
@@ -16,28 +18,32 @@ function getComputerChoice() {
 let score1 = 0;
 let score2 = 0;
 
-for(i=0; i < 6; i++)
-{
-    console.log(i);
-}
+let play;
 
-while (score1 < 3 && score2 < 3) {
-    let play = prompt("Rock, paper, scissors, SHOOT: ");
+
+btn.addEventListener("click", function() {
+    if(score1 >= 3 || score2 >= 3)
+        return;
+    play = document.querySelector("#input").value; //I had forgotten to put .value, which was why it 
+    //wasn't working for a bit
     console.log(`You played: ${play}`);
     if (play !== "rock" && play !== "paper" && play !== "scissors") {
         console.error("wrong entry");
-        continue;
+        return;
     }
 
     let comp = getComputerChoice();
     console.log(comp);
 
-    if (play == comp) continue;
+    if (play == comp) return;
     if ((play == "rock" && comp == "scissors") || (play == "paper" && comp == "rock") || 
     (play == "scissors" && comp == "paper")) score1++;
     else score2++;
     console.log(`Score. You: ${score1}, Computer: ${score2}`);
-}
+    
+    if(score1 == 3 || score2 == 3){
+        if(score1 > score2) console.log("YOU WIN");
+        else console.log("YOU LOSE :/");
+    }
+});
 
-if(score1 > score2) console.log("YOU WIN");
-else console.log("YOU LOSE :/");
