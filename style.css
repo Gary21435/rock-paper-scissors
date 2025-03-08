@@ -38,13 +38,52 @@ h1 {
     padding: auto;
 }
 
+p {
+    color: rgb(24, 116, 156);
+}
+
 .scoreboard {
     width: 700px;
-    height: 500px;
+    height: 400px;
     background-color: aliceblue;
     border: 5px solid rgb(24, 116, 156);
     border-radius: 50px;
     margin-top: 50px;
+    padding: 20px;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scoreboard {
+    font-size: 45px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+#scores {
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.scorebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.score {
+    font-size: 150px;
+    margin: 0;
+    margin-top: 0px;
+}
+
+.msg {
+    font-size: 30px;
+    color:rgb(194, 87, 87);
+    margin-top: 25px;
 }
