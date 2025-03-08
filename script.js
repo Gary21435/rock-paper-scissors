@@ -23,6 +23,7 @@ let play;
 const p1_score = document.querySelector("#score1");
 const p2_score = document.querySelector("#score2");
 const msg = document.querySelector(".msg");
+const startOver = document.querySelector("#start-over");
 
 function displayScore(){
     console.log(`Score. You: ${score1}, Computer: ${score2}`);
@@ -42,6 +43,12 @@ function malFunction(e){
     p.textContent = play;
 
     
+}
+
+function handleStartOver() {
+    score1 = score2 = 0;
+    displayScore();
+    msg.textContent = "Let's Play!";
 }
 
 function handleShit(e){
@@ -78,12 +85,12 @@ function handleShit(e){
         msg.textContent = "You Suck! LMAO";
 
     if(score1 == 3 || score2 == 3){
-        if(score1 > score2) console.log("YOU WIN");
-        else console.log("YOU LOSE :/");
+        if(score1 > score2) msg.textContent="You Win!";
+        else msg.textContent= "YOU LOSE :/";
     }
 }
 
 //btn.addEventListener("click", (e) => malFunction(e)); // you just put the name of the function with no ()
                                            // in JS, a function() will execute wherever it is placed.
 btnContainer.addEventListener("click", (e) => handleShit(e));
-
+startOver.addEventListener("click", handleStartOver);
