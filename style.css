@@ -1,0 +1,50 @@
+
+.roboto-dog {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: beige;
+}
+
+h1 {
+    color: rgb(24, 116, 156);
+    font-size: 60px;
+}
+
+.btn {
+    background-color: rgb(24, 116, 156);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 80px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 50px;
+    padding: auto;
+}
+
+.scoreboard {
+    width: 700px;
+    height: 500px;
+    background-color: aliceblue;
+    border: 5px solid rgb(24, 116, 156);
+    border-radius: 50px;
+    margin-top: 50px;
+
+    display: flex;
+}
