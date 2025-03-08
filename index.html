@@ -10,22 +10,22 @@
     <h1>Play Rock, Paper, Scissors!</h1>
     <div class="btn-container">
         <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="ppr">Paper</button>
-        <button class="btn" id="ssr">Scissors</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Scissors</button>
     </div>
     <div class="scoreboard">
         <p id="scoreboard">Scoreboard</p>
         <div id="scores">
             <div class="scorebox">
                 <p>Your score:</p>
-                <p class="score">2</p>
+                <p class="score" id="score1">0</p>
             </div>
             <div class="scorebox">
                 <p>Computer score:</p>
-                <p class="score">2</p>
+                <p class="score" id="score2">0</p>
             </div>
         </div>
-        <p class="msg">Fight!</p>
+        <p class="msg">Let's Play!</p>
     </div>
 
     <script src="script.js"></script> <!--this was the main problem; I put this in head and 
